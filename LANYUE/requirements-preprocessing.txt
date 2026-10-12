@@ -1,0 +1,7 @@
+-r requirements.txt
+rasterio==1.3.6
+affine==2.4.0
+# Optional migration from CE2 metadata or native512 NAC LMDBs.
+lmdb==1.7.3
+# Optional Parquet catalogues; JSONL catalogues are always written.
+# pyarrow>=17,<22

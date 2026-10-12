@@ -1,0 +1,20 @@
+LANYUE
+
+This release contains the five-modal CE2-anchor v2 lunar pretraining path
+and its native NAC frozen-teacher distillation extension.
+The shared hierarchical encoder and masked reconstruction implementation are
+adapted from HiViT. The upstream MIT LICENSE is retained verbatim.
+
+HiViT paper:
+Zhang, Xiaosong; Tian, Yunjie; Xie, Lingxi; Huang, Wei; Dai, Qi;
+Ye, Qixiang; Tian, Qi. HiViT: A Simpler and More Efficient Design of
+Hierarchical Vision Transformer. ICLR 2023.
+https://arxiv.org/abs/2205.14949
+
+The positional embedding utilities retain their original Meta Platforms,
+Inc. copyright notice and source references. Third-party dependencies retain
+their respective licenses.
+
+Dataset files, model weights, training logs, and upstream experimental
+baselines are not included in this source release. No new author names,
+paper identifiers, model download links, or performance claims are inferred.
