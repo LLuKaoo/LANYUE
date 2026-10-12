@@ -3,8 +3,6 @@
 Lunar masked pretraining with a shared HiViT encoder, physical-scale embeddings,
 spherical geolocation and structural saliency guidance.
 
-[中文](README_zh-CN.md)
-
 ## Model overview
 
 - Five CE2-anchored sources: CE-2 DOM/DEM, LROC WAC, SLDEM and Mini-RF.
