@@ -1,9 +1,11 @@
-# LANYUE-FM
+# LANYUE
 
 Lunar masked pretraining with a shared HiViT encoder, physical-scale embeddings,
 spherical geolocation and structural saliency guidance.
 
 ## Model overview
+
+![LANYUE model architecture](assets/lanyue-architecture.png)
 
 - Five CE2-anchored sources: CE-2 DOM/DEM, LROC WAC, SLDEM and Mini-RF.
 - Native-resolution NAC extension through frozen-teacher distillation.
@@ -14,7 +16,7 @@ spherical geolocation and structural saliency guidance.
 
 ## Installation
 
-Run from `LANYUE-FM/`, with a PyTorch build compatible with your CUDA version:
+Run from `LANYUE/`, with a PyTorch build compatible with your CUDA version:
 
 ```bash
 python -m pip install -r requirements.txt
