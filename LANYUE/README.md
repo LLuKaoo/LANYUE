@@ -12,7 +12,7 @@ spherical geolocation and structural saliency guidance.
 - Dense features for any supported modality subset, including WAC/DEM-only
   and SAR-only inputs.
 
-**Pretrained weights:** [Hugging Face](https://huggingface.co/LLukaoo/LANYUE) · [Download KD3](https://huggingface.co/LLukaoo/LANYUE/resolve/main/lanyue-kd3.pth?download=true).
+**Pretrained weights:** [Hugging Face](https://huggingface.co/LLukaoo/LANYUE) · [Download LANYUE-HiViT-Base](https://huggingface.co/LLukaoo/LANYUE/resolve/main/lanyue-hivit-base.pth?download=true).
 
 The released checkpoint supports all six modalities, including NAC, and
 corresponds to distillation epoch 3. Its matching model configuration and
@@ -67,7 +67,7 @@ Use native 512 × 512 NAC data, prepared through the
 
 ## Using the model
 
-Load the released six-modality KD3 checkpoint from Hugging Face:
+Load the released six-modality LANYUE-HiViT-Base checkpoint from Hugging Face:
 
 ```python
 import torch
@@ -75,7 +75,7 @@ from huggingface_hub import hf_hub_download
 from lanyue.models import lanyue_nac
 from lanyue.features import encode_features
 
-path = hf_hub_download("LLukaoo/LANYUE", "lanyue-kd3.pth")
+path = hf_hub_download("LLukaoo/LANYUE", "lanyue-hivit-base.pth")
 checkpoint = torch.load(path, map_location="cpu", weights_only=True)
 model = lanyue_nac(**checkpoint["config"]["model"])
 model.load_state_dict(checkpoint["model"], strict=True)
