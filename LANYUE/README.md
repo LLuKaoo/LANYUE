@@ -58,8 +58,7 @@ For Slurm, set `DATA_ROOT` and `CONFIG`, then submit
 `sbatch LANYUE/scripts/pretrain.sbatch` from the repository root or
 `sbatch scripts/pretrain.sbatch` from the model directory.
 
-Historical paper checkpoints use different
-canvases and decoder depths; use the matching configuration when loading them.
+Load pretrained weights using the model configuration stored in the checkpoint.
 
 ## NAC distillation
 
