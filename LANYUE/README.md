@@ -12,7 +12,11 @@ spherical geolocation and structural saliency guidance.
 - Dense features for any supported modality subset, including WAC/DEM-only
   and SAR-only inputs.
 
-**Pretrained weights:** public download links are pending.
+**Pretrained weights:** [Hugging Face](https://huggingface.co/LLukaoo/LANYUE) · [Download KD3](https://huggingface.co/LLukaoo/LANYUE/resolve/main/lanyue-kd3.pth?download=true).
+
+The released checkpoint supports all six modalities, including NAC, and
+corresponds to distillation epoch 3. Its matching model configuration and
+normalization statistics are included in the checkpoint.
 
 ## Installation
 
@@ -63,31 +67,33 @@ Use native 512 × 512 NAC data, prepared through the
 
 ## Using the model
 
-For a five-modal v2 checkpoint written by `lanyue.train`:
+Load the released six-modality KD3 checkpoint from Hugging Face:
 
 ```python
 import torch
-from lanyue.models import lanyue_base
+from huggingface_hub import hf_hub_download
+from lanyue.models import lanyue_nac
 from lanyue.features import encode_features
 
-checkpoint = torch.load("/models/lanyue_v2.pth", map_location="cpu", weights_only=True)
-model = lanyue_base(**checkpoint["config"]["model"])
+path = hf_hub_download("LLukaoo/LANYUE", "lanyue-kd3.pth")
+checkpoint = torch.load(path, map_location="cpu", weights_only=True)
+model = lanyue_nac(**checkpoint["config"]["model"])
 model.load_state_dict(checkpoint["model"], strict=True)
 model.eval()
 
-# Illustrative inputs; use the checkpoint/task preprocessing for real images.
-inputs = {"nasa_dom": torch.randn(1, 1, 224, 224),
-          "nasa_dem": torch.randn(1, 1, 224, 224)}
+# Illustrative normalized inputs; apply the appropriate image preprocessing.
+inputs = {"nasa_dom": torch.randn(1, 1, 48, 88),
+          "nasa_dem": torch.randn(1, 1, 80, 144)}
 with torch.no_grad():
     tokens = encode_features(model, inputs)
     descriptor = torch.cat([x.mean(1) for x in tokens.values()], dim=-1)
 ```
 
-Inputs use `[B,1,H,W]` tensors, with spatial sizes divisible by the modality
+Inputs use `[B,1,H,W]` tensors with spatial sizes divisible by the modality
 patch size. Coordinates, when available, use `center_lonlat` in longitude,
-latitude order and degrees. Inference from a v2 checkpoint uses its saved model
-configuration and does not require a separate training JSON. NAC checkpoints
-must be instantiated with `lanyue_nac` using their saved teacher model settings.
+latitude order and degrees. Any supported modality subset can be supplied,
+including NAC alone. Use the checkpoint's saved model configuration and the
+appropriate normalization; a separate training JSON is not required for inference.
 
 ## License
 
