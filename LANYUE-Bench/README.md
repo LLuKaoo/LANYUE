@@ -27,7 +27,7 @@ Sample counts refer to the versions used in LANYUE-Bench. Registration counts
 image pairs; retrieval counts crater identities. LunarPSRC stores 512 × 512
 images and commonly uses 224 × 224 model inputs.
 
-The five original-source links are placeholders for the corresponding papers.
+Public datasets are linked to their original data releases or publications.
 
 <!-- Published dataset downloads. -->
 [bench-all]: https://huggingface.co/datasets/LLukaoo/LANYUE-bench
@@ -39,9 +39,9 @@ The five original-source links are placeholders for the corresponding papers.
 [lunarscc]: https://huggingface.co/datasets/LLukaoo/LANYUE-bench/resolve/main/archives/LunarSCC.tar?download=true
 [lunarpsrc]: https://huggingface.co/datasets/LLukaoo/LANYUE-bench/resolve/main/archives/LunarPSRC.tar?download=true
 
-<!-- Replace these placeholders with the public datasets' original papers. -->
-[odplcd-paper]: https://example.com/REPLACE_WITH_ODPLCD_PAPER_URL
-[moon-crater-paper]: https://example.com/REPLACE_WITH_MOON_CRATER_DATA_PAPER_URL
-[rilles-paper]: https://example.com/REPLACE_WITH_SINUOUS_RILLES_PAPER_URL
-[boulder-paper]: https://example.com/REPLACE_WITH_BOULDER_DATABASE_PAPER_URL
-[lrocnet-paper]: https://example.com/REPLACE_WITH_LROCNET_PAPER_URL
+<!-- Original dataset and publication sources. -->
+[odplcd-paper]: https://www.nssdc.ac.cn/nssdc_zh/html/siteinfo.html?439d18ee-a8a8-4feb-86c9-39db28b15fd5
+[moon-crater-paper]: https://zenodo.org/records/5563001
+[rilles-paper]: https://www.mdpi.com/2072-4292/16/9/1602
+[boulder-paper]: https://zenodo.org/records/8171052
+[lrocnet-paper]: https://zenodo.org/records/7041842
