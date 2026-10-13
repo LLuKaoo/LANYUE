@@ -28,7 +28,9 @@ LROC NAC. CE-2 DOM anchors 3,106,648 multisource samples; an additional
 these give 3,288,868 samples, as reported in the manuscript. Observations from
 the same footprint can have different spatial scales and missing modalities.
 
-The full pretraining dataset has not been publicly released. Data preparation
+![LANYUE-Pretrain spatial distribution](assets/lanyue-pretrain-distribution.png)
+
+Data preparation
 utilities are included in the model's [preprocessing directory](LANYUE/preprocessing/).
 
 ## LANYUE
