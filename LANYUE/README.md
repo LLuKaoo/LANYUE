@@ -20,17 +20,25 @@ normalization statistics are included in the checkpoint.
 
 ## Installation
 
-Run from `LANYUE/`, with a PyTorch build compatible with your CUDA version:
+Clone the repository and run from its model directory, with a PyTorch build
+compatible with your CUDA version:
 
 ```bash
+git clone https://github.com/LLuKaoo/LANYUE.git
+cd LANYUE/LANYUE
 python -m pip install -r requirements.txt
-python -m pip install -r requirements-preprocessing.txt
+python -m pip install huggingface_hub
 ```
 
 ## Pretraining
 
-Prepare a dataset using [`LANYUE-Pretrain`](../LANYUE-Pretrain/README.md).
-Copy its measured normalization statistics into `data.normalization` in the config.
+The full pretraining dataset is not publicly released. To prepare your own
+CE2-anchor v2 data, install `requirements-preprocessing.txt` and use the
+[dataset builder](preprocessing/build_ce2_anchor_v2.py),
+[validator](preprocessing/validate_ce2_anchor_v2.py) and
+[normalization tool](preprocessing/compute_stats.py). Each tool exposes its
+arguments through `--help`.
+Copy the measured normalization statistics into `data.normalization` in the config.
 Training configurations are supplied externally through `--config`; this directory
 does not bundle a `configs/` folder. A pretraining JSON must contain `model`,
 `data` and `training` sections with the required run settings.
@@ -62,8 +70,9 @@ python -m lanyue.distill \
 
 The NAC JSON must contain `distillation`, `nac_data` and `training` sections.
 The teacher checkpoint supplies the old-modality model and preprocessing settings.
-Use native 512 × 512 NAC data, prepared through the
-[NAC data tools](../LANYUE-Pretrain/data_collection/README.md#native-nac).
+Use native 512 × 512 NAC data, prepared through the included
+[NAC preprocessing tool](preprocessing/nac.py), which provides `build`,
+`validate` and `stats` commands (`python -m preprocessing.nac --help`).
 
 ## Using the model
 
@@ -87,6 +96,7 @@ inputs = {"nasa_dom": torch.randn(1, 1, 48, 88),
 with torch.no_grad():
     tokens = encode_features(model, inputs)
     descriptor = torch.cat([x.mean(1) for x in tokens.values()], dim=-1)
+print(descriptor.shape)  # torch.Size([1, 1024])
 ```
 
 Inputs use `[B,1,H,W]` tensors with spatial sizes divisible by the modality
