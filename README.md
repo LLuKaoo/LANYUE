@@ -101,6 +101,8 @@ LANYUE-Bench comprises 12 datasets: five use existing public sources and seven
 are newly constructed. The tasks span geomorphological perception, cross-source
 correspondence and geoscientific characterization.
 
+![LANYUE-Bench results](assets/lanyue-bench-results.png)
+
 | Group | Dataset | Samples | Task | Access |
 |---|---|---:|---|---|
 | Geomorphology | ODPLCD | 2,784 | Crater detection | [Original source][odplcd] |
