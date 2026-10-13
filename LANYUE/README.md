@@ -32,8 +32,8 @@ python -m pip install huggingface_hub
 
 ## Pretraining
 
-The full pretraining dataset is not publicly released. To prepare your own
-CE2-anchor v2 data, install `requirements-preprocessing.txt` and use the
+To prepare your own CE2-anchor v2 data, install
+`requirements-preprocessing.txt` and use the
 [dataset builder](preprocessing/build_ce2_anchor_v2.py),
 [validator](preprocessing/validate_ce2_anchor_v2.py) and
 [normalization tool](preprocessing/compute_stats.py). Each tool exposes its
@@ -53,6 +53,10 @@ python -m lanyue.train \
 DATA_ROOT=/data/ce2_anchor_v2 CONFIG=/data/configs/pretrain.json \
 NUM_GPUS=8 bash scripts/pretrain.sh
 ```
+
+For Slurm, set `DATA_ROOT` and `CONFIG`, then submit
+`sbatch LANYUE/scripts/pretrain.sbatch` from the repository root or
+`sbatch scripts/pretrain.sbatch` from the model directory.
 
 Historical paper checkpoints use different
 canvases and decoder depths; use the matching configuration when loading them.

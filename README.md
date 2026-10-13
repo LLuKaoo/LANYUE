@@ -30,8 +30,8 @@ the same footprint can have different spatial scales and missing modalities.
 
 ![LANYUE-Pretrain spatial distribution](assets/lanyue-pretrain-distribution.png)
 
-Data preparation
-utilities are included in the model's [preprocessing directory](LANYUE/preprocessing/).
+Data preparation utilities are included in the model's
+[preprocessing directory](LANYUE/preprocessing/).
 
 ## LANYUE
 
