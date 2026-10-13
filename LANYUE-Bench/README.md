@@ -24,8 +24,7 @@ is distributed as a separate TAR archive.
 | LunarPSRC | 406 | CE-2 DOM / LROC WAC | 512 × 512 | Permanently shadowed region identification | [Download][lunarpsrc] |
 
 Sample counts refer to the versions used in LANYUE-Bench. Registration counts
-image pairs; retrieval counts crater identities. LunarPSRC stores 512 × 512
-images and commonly uses 224 × 224 model inputs.
+image pairs; retrieval counts crater identities.
 
 Public datasets are linked to their original data releases or publications.
 
