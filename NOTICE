@@ -15,6 +15,7 @@ The positional embedding utilities retain their original Meta Platforms,
 Inc. copyright notice and source references. Third-party dependencies retain
 their respective licenses.
 
-Dataset files, model weights, training logs, and upstream experimental
-baselines are not included in this source release. No new author names,
-paper identifiers, model download links, or performance claims are inferred.
+Data files, pretrained weights and training logs are distributed separately
+from this source repository. Dataset and model-weight redistribution terms
+are specified in their respective releases; the code license does not
+relicense upstream lunar observations or scientific catalogues.

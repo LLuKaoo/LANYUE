@@ -5,7 +5,7 @@ spherical geolocation and structural saliency guidance.
 
 ## Model overview
 
-![LANYUE model architecture](assets/lanyue-architecture.png)
+![LANYUE model architecture](../assets/lanyue-architecture.png)
 
 - Five CE2-anchored sources: CE-2 DOM/DEM, LROC WAC, SLDEM and Mini-RF.
 - Native-resolution NAC extension through frozen-teacher distillation.
@@ -107,4 +107,4 @@ appropriate normalization; a separate training JSON is not required for inferenc
 
 ## License
 
-[MIT](LICENSE). Attribution is retained in [NOTICE](NOTICE).
+[MIT](../LICENSE). Attribution is retained in [NOTICE](../NOTICE).

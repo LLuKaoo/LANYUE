@@ -3,7 +3,7 @@
 LANYUE-Bench comprises 12 downstream datasets for lunar geomorphological
 perception, cross-source correspondence and geoscientific characterization.
 
-![LANYUE-Bench task overview](assets/lanyue-bench-overview.png)
+![LANYUE-Bench task overview](../assets/lanyue-bench-overview.png)
 
 The seven new datasets are available on [Hugging Face][bench-all]. Each dataset
 is distributed as a separate TAR archive.

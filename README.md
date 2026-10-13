@@ -42,7 +42,7 @@ Physical-scale encoding captures differences in spatial resolution, while
 spherical geolocation encoding provides geographic context. A subsequent
 frozen-teacher distillation stage introduces LROC NAC observations.
 
-![LANYUE model architecture](LANYUE/assets/lanyue-architecture.png)
+![LANYUE model architecture](assets/lanyue-architecture.png)
 
 **Pretrained weights:** [Hugging Face](https://huggingface.co/LLukaoo/LANYUE) ·
 [Download LANYUE-HiViT-Base](https://huggingface.co/LLukaoo/LANYUE/resolve/main/lanyue-hivit-base.pth?download=true).
@@ -124,15 +124,15 @@ are released as separate TAR archives on
 
 ## License
 
-Model code retains the [MIT license](LANYUE/LICENSE) and
-[third-party attribution](LANYUE/NOTICE). Refer to the corresponding Hugging Face
+Model code retains the [MIT license](LICENSE) and
+[third-party attribution](NOTICE). Refer to the corresponding Hugging Face
 cards for the released weights and datasets, and to the original sources for
 the five public datasets.
 
 ## Acknowledgements
 
 LANYUE builds on HiViT and masked-autoencoding components credited in
-[NOTICE](LANYUE/NOTICE).
+[NOTICE](NOTICE).
 
 [odplcd]: https://www.nssdc.ac.cn/nssdc_zh/html/siteinfo.html?439d18ee-a8a8-4feb-86c9-39db28b15fd5
 [moon-crater]: https://zenodo.org/records/5563001
