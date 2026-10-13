@@ -7,6 +7,8 @@ implementation, pretrained weights and the LANYUE-Bench dataset catalogue.
 [Model code](LANYUE/) · [Pretrained weights](https://huggingface.co/LLukaoo/LANYUE) ·
 [Benchmark](LANYUE-Bench/) · [Benchmark downloads](https://huggingface.co/datasets/LLukaoo/LANYUE-bench)
 
+![LANYUE overview](assets/lanyue-overview.png)
+
 ## Key features
 
 - 🌕 **Multisource lunar pretraining:** approximately 3.29 million samples from
@@ -97,8 +99,6 @@ LANYUE-Bench comprises 12 datasets: five use existing public sources and seven
 are newly constructed. The tasks span geomorphological perception, cross-source
 correspondence and geoscientific characterization.
 
-![LANYUE-Bench task overview](LANYUE-Bench/assets/lanyue-bench-overview.png)
-
 | Group | Dataset | Samples | Task | Access |
 |---|---|---:|---|---|
 | Geomorphology | ODPLCD | 2,784 | Crater detection | [Original source][odplcd] |
@@ -130,8 +130,7 @@ the five public datasets.
 ## Acknowledgements
 
 LANYUE builds on HiViT and masked-autoencoding components credited in
-[NOTICE](LANYUE/NOTICE). The repository organization follows
-[Copernicus-FM](https://github.com/zhu-xlab/Copernicus-FM).
+[NOTICE](LANYUE/NOTICE).
 
 [odplcd]: https://www.nssdc.ac.cn/nssdc_zh/html/siteinfo.html?439d18ee-a8a8-4feb-86c9-39db28b15fd5
 [moon-crater]: https://zenodo.org/records/5563001
