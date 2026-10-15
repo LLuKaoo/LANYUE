@@ -14,6 +14,11 @@ spherical geolocation and structural saliency guidance.
 
 **Pretrained weights:** [Hugging Face](https://huggingface.co/LLukaoo/LANYUE) · [Download LANYUE-HiViT-Base](https://huggingface.co/LLukaoo/LANYUE/resolve/main/lanyue-hivit-base.pth?download=true).
 
+**Weight access requires manual approval.** Sign in to Hugging Face and
+[request access](https://huggingface.co/LLukaoo/LANYUE) with the account
+you will use for downloading. After approval, run `hf auth login` with
+a read token from that account before downloading the weights.
+
 The released checkpoint supports all six modalities, including NAC, and
 corresponds to distillation epoch 3. Its matching model configuration and
 normalization statistics are included in the checkpoint.
@@ -28,6 +33,7 @@ git clone https://github.com/LLuKaoo/LANYUE.git
 cd LANYUE/LANYUE
 python -m pip install -r requirements.txt
 python -m pip install huggingface_hub
+hf auth login  # After your access request is approved
 ```
 
 ## Pretraining
